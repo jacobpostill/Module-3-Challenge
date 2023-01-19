@@ -22,13 +22,13 @@ function generatePassword(){
   var special = confirm("Would you like to include special characters in your password?");
   var availableChar = "";
   var password = "";
-  if (lowercase === True) {
+  if (lowercase == true) {
     availableChar += "abcdefghijklmnopqrstuvwxyz";
-  } else if (uppercase === True) {
+  } else if (uppercase == true) {
     availableChar += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  } else if (numeric === True) {
+  } else if (numeric == true) {
     availableChar +="0123456789";
-  } else if (special === True) {
+  } else if (special == true) {
     availableChar +=" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ";
   }
   for (var i=0, num = availableChar.length; i<length; i++) {
