@@ -10,5 +10,32 @@ function writePassword() {
 
 }
 
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function generatePassword(){
+  var length = prompt("How long would you like your password to be? (8-128 characters)");
+  var lowercase = confirm("Would you like to include lowercases in your password?");
+  var uppercase = confirm("Would you like to include Uppercases in your password?");
+  var numeric = confirm("Would you like to include numbers in your password?");
+  var special = confirm("Would you like to include special characters in your password?");
+  var availableChar = "";
+  var password = "";
+  if (lowercase === True) {
+    availableChar += "abcdefghijklmnopqrstuvwxyz";
+  } else if (uppercase === True) {
+    availableChar += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  } else if (numeric === True) {
+    availableChar +="0123456789";
+  } else if (special === True) {
+    availableChar +=" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ";
+  }
+  for (var i=0, num = availableChar.length; i<length; i++) {
+    password += availableChar.charAt(Math.floor(Math.random() * num));
+
+}
+return password;
+
+}
+
