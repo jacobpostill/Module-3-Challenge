@@ -24,15 +24,18 @@ function generatePassword(){
   var password = "";
   if (lowercase == true) {
     availableChar += "abcdefghijklmnopqrstuvwxyz";
-  } else if (uppercase == true) {
+  } 
+  if (uppercase == true) {
     availableChar += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  } else if (numeric == true) {
+  } 
+  if (numeric == true) {
     availableChar +="0123456789";
-  } else if (special == true) {
+  } 
+  if (special == true) {
     availableChar +=" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ";
   }
-  for (var i=0, num = availableChar.length; i<length; i++) {
-    password += availableChar.charAt(Math.floor(Math.random() * num));
+  for (var i=0; i<length; i++) {
+    password += availableChar.charAt(Math.floor(Math.random() * availableChar.length));
 
 }
 return password;
