@@ -10,4 +10,4 @@ In this repo you will be able to find a password generator. After clicking "gene
 
 ### Link
 
-https://jacobpostill.github.io/Horison-Service-Start/
+https://jacobpostill.github.io/The-Protected-Password-Power/
